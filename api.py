@@ -5,9 +5,6 @@ import mysql.connector
 
 app = flask.Flask(__name__)
 
-conn = mysql.connector.connect(user="root",host="localhost",password="root")
-cursor = conn.cursor()
-
 @app.route('/', methods=['GET'])
 def home():
     return '''<h1>API Sakila</h1>
