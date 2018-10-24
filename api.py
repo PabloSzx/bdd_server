@@ -3,16 +3,10 @@ import json
 from flask import request, jsonify, redirect
 import mysql.connector
 
-# Creación de una nueva aplicación web
 app = flask.Flask(__name__)
 
-# Conexión al SGBD
-  ## reemplazar 'root' por el password del usuario administrador de MySQL
 conn = mysql.connector.connect(user="root",host="localhost",password="root")
 cursor = conn.cursor()
-##cursor.execute("USE sakila")
-
-# Definición de las rutas
 
 @app.route('/', methods=['GET'])
 def home():
